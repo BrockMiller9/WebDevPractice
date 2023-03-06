@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="static/styles.css">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  
+</head>
+<body>
+    <div class='container'>
+   <h1 class='text-center mt-2 mb-4'>{{company_name}} Careers</h1>
+    <img class='img-fluid rounded-4' id='banner' src="https://images.unsplash.com/photo-1504805572947-34fad45aed93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" >
+    <h2 class='text-center mt-2 mb-4'>About Careers</h2>
+        <p class='lead'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda vero praesentium dolorem placeat hic repellendus cupiditate id debitis repellat aliquam, error ducimus commodi ullam magni aperiam adipisci aliquid nesciunt eligendi!</p>
+    <h2 class='text-center mt-2 mb-4'>Open Posistions</h2>
+    <div>
+
+{% for job in jobs%}
+    {%include 'jobitem.html'%}
+{% endfor %}       
+    </div>
+        <div class='text-center'>
+    <button class='btn btn-primary btn-lg '>Contact Us</button>
+            <p class='mt-4'>Copyright 2023, Brock Miller</p>
+            </div>
+</div>
+</body>
+</html>
